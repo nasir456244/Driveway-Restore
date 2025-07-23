@@ -107,7 +107,7 @@ body {
 
 /* Hero Section */
 #hero {
-    background: url('hero-background.png') no-repeat center center/cover;
+    background: url('hero-background.webp') no-repeat center center/cover;
     color: var(--white);
     height: 70vh;
     min-height: 500px;
