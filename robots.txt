@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://drivewayrestored.com.au/sitemap.xml
