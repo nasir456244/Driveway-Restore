@@ -426,7 +426,9 @@ footer h3 {
 .footer-areas strong {
     color: var(--white);
 }
-
+.footer-hours strong {
+    color: var(--white);
+}
 .social-media a {
     color: #adb5bd;
     text-decoration: none;
