@@ -6,15 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hr Pressure Work | Pressure Cleaning Brisbane, Logan, Ipswich & Gold Coast</title>
     
-    <!-- Preload critical resources -->
+    <!-- Preload critical resources with optimized loading -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"></noscript>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
-    <!-- Preload critical images -->
-    <link rel="preload" href="logo.webp" as="image">
-    <link rel="preload" href="hero-background.webp" as="image">
+    <!-- Load only essential Font Awesome icons to reduce CSS bloat -->
+    <style>
+        /* Essential Font Awesome icons only - reduces unused CSS */
+        @font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2) format("woff2")}
+        @font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2) format("woff2")}
+        .fas,.fa-solid{font-family:"Font Awesome 6 Free";font-weight:900}
+        .fab,.fa-brands{font-family:"Font Awesome 6 Brands";font-weight:400}
+        .fas:before,.fa-solid:before,.fab:before,.fa-brands:before{text-rendering:auto;-webkit-font-smoothing:antialiased}
+        .fa-phone:before{content:"\f095"}.fa-envelope:before{content:"\f0e0"}.fa-road:before{content:"\f018"}
+        .fa-shoe-prints:before{content:"\f54b"}.fa-layer-group:before{content:"\f5fd"}.fa-border-all:before{content:"\f84c"}
+        .fa-home:before{content:"\f015"}.fa-building:before{content:"\f1ad"}.fa-rocket:before{content:"\f135"}
+        .fa-tags:before{content:"\f02c"}.fa-map-marked-alt:before{content:"\f5a0"}.fa-star:before{content:"\f005"}
+        .fa-facebook-f:before{content:"\f39e"}.fa-instagram:before{content:"\f16d"}
+    </style>
+    
+    <!-- Preload critical images with fetchpriority -->
+    <link rel="preload" href="logo.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="hero-background.webp" as="image" fetchpriority="high">
 
     <script type="application/ld+json">
 {
@@ -163,7 +176,7 @@
             color: var(--primary-color);
         }
 
-        /* Hero Section */
+        /* Hero Section - Optimized background loading */
         #hero {
             background: url('hero-background.webp') no-repeat center center/cover;
             color: var(--white);
@@ -174,6 +187,8 @@
             justify-content: center;
             text-align: center;
             position: relative;
+            content-visibility: auto;
+            contain-intrinsic-size: 500px;
         }
 
         #hero::before {
@@ -265,7 +280,7 @@
         <div class="container">
             <div class="logo">
                 <a href="#">
-                    <img src="logo.webp" alt="Hr Pressure Work Logo" class="logo-img" loading="eager">
+                    <img src="logo.webp" alt="Hr Pressure Work Logo" class="logo-img" loading="eager" fetchpriority="high" width="78" height="40">
                     Hr Pressure Work
                 </a>
             </div>
@@ -293,27 +308,27 @@
                 <p class="section-intro">See the difference our professional pressure washing makes. High-quality results guaranteed.</p>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="before-driveway.webp" alt="Dirty driveway before pressure washing in Brisbane" loading="lazy" width="400" height="300">
+                        <img src="before-driveway.webp" alt="Dirty driveway before pressure washing in Brisbane" loading="lazy" width="372" height="496" decoding="async">
                         <div class="label">Before</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="after-driveway.webp" alt="Clean driveway after pressure washing in Brisbane" loading="lazy" width="400" height="300">
+                        <img src="after-driveway.webp" alt="Clean driveway after pressure washing in Brisbane" loading="lazy" width="372" height="496" decoding="async">
                         <div class="label after">After</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="before-pathway.webp" alt="Grimey pathway before cleaning on the Gold Coast" loading="lazy" width="400" height="300">
+                        <img src="before-pathway.webp" alt="Grimey pathway before cleaning on the Gold Coast" loading="lazy" width="372" height="496" decoding="async">
                         <div class="label">Before</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="after-pathway.webp" alt="Spotless pathway after cleaning on the Gold Coast" loading="lazy" width="400" height="300">
+                        <img src="after-pathway.webp" alt="Spotless pathway after cleaning on the Gold Coast" loading="lazy" width="372" height="496" decoding="async">
                         <div class="label after">After</div>
                     </div>
                      <div class="gallery-item">
-                        <img src="before-concrete.webp" alt="Stained concrete patio before cleaning in Ipswich" loading="lazy" width="400" height="300">
+                        <img src="before-concrete.webp" alt="Stained concrete patio before cleaning in Ipswich" loading="lazy" width="372" height="496" decoding="async">
                         <div class="label">Before</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="after-concrete.webp" alt="Immaculate concrete patio after cleaning in Ipswich" loading="lazy" width="400" height="300">
+                        <img src="after-concrete.webp" alt="Immaculate concrete patio after cleaning in Ipswich" loading="lazy" width="372" height="496" decoding="async">
                         <div class="label after">After</div>
                     </div>
                 </div>
@@ -365,17 +380,17 @@
                 <h2>Our Simple 3-Step Process</h2>
                 <div class="steps-container">
                     <div class="step-card">
-                        <div class="step-icon"><img src="icon-quote.webp" alt="Quote icon" loading="lazy" width="50" height="50"></div>
+                        <div class="step-icon"><img src="icon-quote.webp" alt="Quote icon" loading="lazy" width="50" height="50" decoding="async"></div>
                         <h3>Step 1: Get a Free Quote</h3>
                         <p>Contact us with your details, and we'll provide a fast, no-obligation quote for your pressure cleaning needs in Brisbane or nearby areas.</p>
                     </div>
                     <div class="step-card">
-                        <div class="step-icon"><img src="icon-cleaner.webp" alt="Cleaner icon" loading="lazy" width="50" height="50"></div>
+                        <div class="step-icon"><img src="icon-cleaner.webp" alt="Cleaner icon" loading="lazy" width="50" height="50" decoding="async"></div>
                         <h3>Step 2: We Assign a Local Cleaner</h3>
                         <p>We connect you with a skilled, local pressure cleaner from Ipswich, Logan, or the Gold Coast who arrives on time and ready to work.</p>
                     </div>
                     <div class="step-card">
-                        <div class="step-icon"><img src="icon-sparkle.webp" alt="Sparkle icon" loading="lazy" width="50" height="50"></div>
+                        <div class="step-icon"><img src="icon-sparkle.webp" alt="Sparkle icon" loading="lazy" width="50" height="50" decoding="async"></div>
                         <h3>Step 3: Job Done!</h3>
                         <p>Your surfaces are professionally cleaned, restoring their look and value. You enjoy a pristine, welcoming property.</p>
                     </div>
@@ -417,21 +432,21 @@
                 <div class="testimonial-grid">
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <img src="avatar-sarah.webp" alt="Avatar for Sarah J." class="avatar" loading="lazy" width="40" height="40">
+                            <img src="avatar-sarah.webp" alt="Avatar for Sarah J." class="avatar" loading="lazy" width="40" height="40" decoding="async">
                             <h4>- Sarah J., Brisbane</h4>
                         </div>
                         <p>"Fantastic job on our driveway in Brisbane! It looks brand new. The team was professional and efficient. Highly recommend Hr Pressure Work."</p>
                     </div>
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                             <img src="avatar-mark.webp" alt="Avatar for Mark T." class="avatar" loading="lazy" width="40" height="40">
+                             <img src="avatar-mark.webp" alt="Avatar for Mark T." class="avatar" loading="lazy" width="40" height="40" decoding="async">
                             <h4>- Mark T., Gold Coast</h4>
                         </div>
                         <p>"I needed urgent pressure cleaning for my commercial property on the Gold Coast. They were fast, affordable, and the results were amazing."</p>
                     </div>
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <img src="avatar-emily.webp" alt="Avatar for Emily R." class="avatar" loading="lazy" width="40" height="40">
+                            <img src="avatar-emily.webp" alt="Avatar for Emily R." class="avatar" loading="lazy" width="40" height="40" decoding="async">
                             <h4>- Emily R., Ipswich</h4>
                         </div>
                         <p>"Great service from start to finish. They cleaned our fences and pathway in Ipswich. The difference is night and day. Thank you!"</p>
@@ -549,6 +564,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 400px;
 }
 
 .service-note {
@@ -567,6 +584,7 @@
     overflow: hidden;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    aspect-ratio: 3/4;
 }
 
 .gallery-item img {
@@ -575,6 +593,7 @@
     display: block;
     object-fit: cover;
     transition: transform 0.4s ease;
+    will-change: transform;
 }
 
 .gallery-item:hover img {
@@ -848,7 +867,7 @@ footer h3 {
             document.head.appendChild(link);
         }
 
-        // Load non-critical CSS after page load
+        // Load non-critical CSS after page load with performance optimizations
         if (window.addEventListener) {
             window.addEventListener('load', function() {
                 loadCSS();
@@ -859,8 +878,34 @@ footer h3 {
             });
         }
 
-        // Minimal JavaScript for performance - only essential functionality
+        // Optimize image loading with Intersection Observer for better performance
         document.addEventListener('DOMContentLoaded', function() {
+            // Enhanced lazy loading with Intersection Observer
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.removeAttribute('data-src');
+                            }
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                }, {
+                    rootMargin: '50px 0px',
+                    threshold: 0.01
+                });
+
+                // Observe lazy images
+                document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                    if (img.dataset.src) {
+                        imageObserver.observe(img);
+                    }
+                });
+            }
+
             // Simple smooth scrolling for any anchor links (if needed)
             var links = document.querySelectorAll('a[href^="#"]');
             for (var i = 0; i < links.length; i++) {
